@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -98,7 +97,7 @@ public class AssetPage {
 	            break;
 	        }
 	    }
-	    By organizationLocator = By.xpath("//a[@href='javascript:window.close();' and normalize-space()]");
+	    By organizationLocator = By.xpath("//a[@href='javascript:window.close();']");
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(organizationLocator));
 	    List<WebElement> organizations = driver.findElements(organizationLocator);
 	    if (organizations.isEmpty()) {
@@ -124,7 +123,8 @@ public class AssetPage {
 	            break;
 	        }
 	    }
-	    By organizationLocator = By.xpath("//a[@href='javascript:window.close();' and normalize-space()]");
+	  //  By organizationLocator = By.xpath("//a[@href='javascript:window.close();' and normalize-space()]");
+	    By organizationLocator = By.xpath("//a[@href='javascript:window.close();']");
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(organizationLocator));
 	    List<WebElement> organizations = driver.findElements(organizationLocator);
 	    if (organizations.isEmpty()) {
@@ -204,26 +204,17 @@ public class AssetPage {
 	// Opens the asset by its name
 	public void openAsset(String assetName) {
 
-	    By assetLocator = By.xpath(
-	        "//a[normalize-space(.)='" + assetName + "']"
-	    );
-
+	    By assetLocator = By.xpath("//a[normalize-space(.)='" + assetName + "']");
 	    WebElement visibleAsset = wait.until(driver -> {
-
 	        List<WebElement> assets = driver.findElements(assetLocator);
-
 	        for (WebElement asset : assets) {
-
 	            if (asset.isDisplayed() && asset.isEnabled()) {
 	                return asset;
 	            }
 	        }
-
 	        return null;
 	    });
-
 	    visibleAsset.click();
-
 	    System.out.println("Asset opened successfully: " + assetName);
 	}
 	

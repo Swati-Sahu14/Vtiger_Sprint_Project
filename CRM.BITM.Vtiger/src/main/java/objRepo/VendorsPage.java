@@ -288,8 +288,8 @@ public class VendorsPage {
     private List<WebElement> vendorNumbers;
 
     // Search result rows
-    @FindBy(xpath = "//table[contains(@class,'lvt') and contains(@class,'small')]//tr")
-    private List<WebElement> verifVendors;
+//    @FindBy(xpath = "//table[contains(@class,'lvt') and contains(@class,'small')]//tr")
+//    private List<WebElement> verifVendors;
 
     // Vendor No displayed on the vendor details page
     @FindBy(xpath = "//td[normalize-space()='Vendor No']/following-sibling::td[1]")

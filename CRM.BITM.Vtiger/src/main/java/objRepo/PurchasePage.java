@@ -70,7 +70,6 @@ public class PurchasePage {
         wait.until(ExpectedConditions.visibilityOf(subjectField));
         subjectField.clear();
         subjectField.sendKeys(subject);
-
         Reporter.log("Purchase Order subject entered: " + subject, true);
     }
 
@@ -80,7 +79,6 @@ public class PurchasePage {
         wait.until(ExpectedConditions.elementToBeClickable(statusDropdown));
         Select select = new Select(statusDropdown);
         List<WebElement> options = select.getOptions();
-
         for (int i = 0; i < options.size(); i++) {
             Reporter.log("Status option index " + i + ": "+ options.get(i).getText().trim(),true);
         }
@@ -343,13 +341,8 @@ public class PurchasePage {
 
         By subjectLocator = By.name("subject");
         wait.until(ExpectedConditions.visibilityOfElementLocated(subjectLocator));
-        wait.until(ExpectedConditions.refreshed(
-            ExpectedConditions.elementToBeClickable(subjectLocator)
-        )).clear();
-
-        wait.until(ExpectedConditions.elementToBeClickable(subjectLocator))
-            .sendKeys(value);
-
+        wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(subjectLocator))).clear();
+        wait.until(ExpectedConditions.elementToBeClickable(subjectLocator)).sendKeys(value);
         Reporter.log("Purchase Order subject updated: " + value, true);
     }
     
@@ -370,7 +363,4 @@ public class PurchasePage {
 			Reporter.log("Edited Orders: "+ele.getText(),true);
 		}
 	}
-	
-	
-    
 }
