@@ -105,9 +105,10 @@ public class VendorsPage {
     }
  // Update Website
     public void updateWebsite(String newWebsite) {
-        wait.until(ExpectedConditions.visibilityOf(websiteField));
-        websiteField.clear();
-        websiteField.sendKeys(newWebsite);
+        By websiteLocator = By.name("website");
+        WebElement website = wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(websiteLocator)));
+        website.clear();
+        website.sendKeys(newWebsite);
     }
 
     // Verifies the updated vendor website

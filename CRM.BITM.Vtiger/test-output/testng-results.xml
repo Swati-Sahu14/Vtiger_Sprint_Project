@@ -26,13 +26,10 @@
       <![CDATA[Search Now button clicked.]]>
     </line>
     <line>
-      <![CDATA[Duplicate Vendor form opened.]]>
-    </line>
-    <line>
       <![CDATA[Vendor details saved successfully.]]>
     </line>
     <line>
-      <![CDATA[Duplicate vendor saved: UniqueVendor01_Copy]]>
+      <![CDATA[Vendor website updated: https://updated-example.com]]>
     </line>
     <line>
       <![CDATA[Test completed]]>
@@ -47,32 +44,32 @@
       <![CDATA[Close Database connectivity]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-19T18:40:00 IST" name="Default suite" finished-at="2026-10-19T18:40:25 IST" duration-ms="25347">
+  <suite started-at="2026-10-19T19:16:08 IST" name="Default suite" finished-at="2026-10-19T19:16:36 IST" duration-ms="28148">
     <groups>
       <group name="POS">
-        <method signature="Vendor_Test.duplicateVendor_Test(java.lang.String,java.lang.String)[pri:6, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" name="duplicateVendor_Test" class="crmVitgerVendors.Vendor_Test"/>
+        <method signature="Vendor_Test.updateVendorWebsite_Test(java.lang.String,java.lang.String)[pri:5, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" name="updateVendorWebsite_Test" class="crmVitgerVendors.Vendor_Test"/>
       </group> <!-- POS -->
       <group name="FUN">
-        <method signature="Vendor_Test.duplicateVendor_Test(java.lang.String,java.lang.String)[pri:6, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" name="duplicateVendor_Test" class="crmVitgerVendors.Vendor_Test"/>
+        <method signature="Vendor_Test.updateVendorWebsite_Test(java.lang.String,java.lang.String)[pri:5, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" name="updateVendorWebsite_Test" class="crmVitgerVendors.Vendor_Test"/>
       </group> <!-- FUN -->
     </groups>
-    <test started-at="2026-10-19T18:40:00 IST" name="Default test" finished-at="2026-10-19T18:40:25 IST" duration-ms="25347">
+    <test started-at="2026-10-19T19:16:08 IST" name="Default test" finished-at="2026-10-19T19:16:36 IST" duration-ms="28148">
       <class name="crmVitgerVendors.Vendor_Test">
-        <test-method is-config="true" signature="bs()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:00 IST" name="bs" finished-at="2026-10-19T18:40:00 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="bs()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:08 IST" name="bs" finished-at="2026-10-19T19:16:08 IST" duration-ms="10" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Open Database]]>
             </line>
           </reporter-output>
         </test-method> <!-- bs -->
-        <test-method is-config="true" signature="bt()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:00 IST" name="bt" finished-at="2026-10-19T18:40:00 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="bt()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:08 IST" name="bt" finished-at="2026-10-19T19:16:08 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[PreCondition]]>
             </line>
           </reporter-output>
         </test-method> <!-- bt -->
-        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:00 IST" name="bc" finished-at="2026-10-19T18:40:01 IST" duration-ms="1697" status="PASS">
+        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:09 IST" name="bc" finished-at="2026-10-19T19:16:11 IST" duration-ms="2028" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,7 +86,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- bc -->
-        <test-method signature="duplicateVendor_Test(java.lang.String,java.lang.String)[pri:6, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:01 IST" name="duplicateVendor_Test" data-provider="vendorDuplicateData" finished-at="2026-10-19T18:40:25 IST" duration-ms="23445" status="PASS">
+        <test-method signature="updateVendorWebsite_Test(java.lang.String,java.lang.String)[pri:5, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:11 IST" name="updateVendorWebsite_Test" data-provider="vendorUpdateData" finished-at="2026-10-19T19:16:36 IST" duration-ms="25278" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,7 +95,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[UniqueVendor01_Copy]]>
+                <![CDATA[https://updated-example.com]]>
               </value>
             </param>
           </params>
@@ -116,17 +113,14 @@
               <![CDATA[Search Now button clicked.]]>
             </line>
             <line>
-              <![CDATA[Duplicate Vendor form opened.]]>
-            </line>
-            <line>
               <![CDATA[Vendor details saved successfully.]]>
             </line>
             <line>
-              <![CDATA[Duplicate vendor saved: UniqueVendor01_Copy]]>
+              <![CDATA[Vendor website updated: https://updated-example.com]]>
             </line>
           </reporter-output>
-        </test-method> <!-- duplicateVendor_Test -->
-        <test-method is-config="true" signature="ac()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:25 IST" name="ac" finished-at="2026-10-19T18:40:25 IST" duration-ms="168" status="PASS">
+        </test-method> <!-- updateVendorWebsite_Test -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:36 IST" name="ac" finished-at="2026-10-19T19:16:36 IST" duration-ms="160" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test completed]]>
@@ -136,14 +130,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- ac -->
-        <test-method is-config="true" signature="at()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:25 IST" name="at" finished-at="2026-10-19T18:40:25 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="at()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:36 IST" name="at" finished-at="2026-10-19T19:16:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[PostCondition]]>
             </line>
           </reporter-output>
         </test-method> <!-- at -->
-        <test-method is-config="true" signature="as()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T18:40:25 IST" name="as" finished-at="2026-10-19T18:40:25 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="as()[pri:0, instance:crmVitgerVendors.Vendor_Test@3c46e67a]" started-at="2026-10-19T19:16:37 IST" name="as" finished-at="2026-10-19T19:16:37 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Close Database connectivity]]>

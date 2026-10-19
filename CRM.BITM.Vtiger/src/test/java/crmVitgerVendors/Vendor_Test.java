@@ -86,7 +86,7 @@ public class Vendor_Test extends BaseClass {
 	    vendor.clickEdit();
 	    vendor.updateWebsite(newWebsite);
 	    vendor.clickSave();
-	    Reporter.log("Vendor website update submitted successfully.", true);
+	    Reporter.log("Vendor website updated: " + newWebsite, true);
 	}
 	
 	//Verify Duplicate action creates a separate vendor record

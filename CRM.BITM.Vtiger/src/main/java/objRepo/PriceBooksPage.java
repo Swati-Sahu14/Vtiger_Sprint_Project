@@ -17,10 +17,13 @@ import org.testng.Reporter;
 public class PriceBooksPage {
 
     WebDriver driver;
+    private WebDriverWait wait;
+    
 
 	public PriceBooksPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 	@FindBy(xpath="(//a[@title='Price Books'])[4]")
 	private WebElement pricebookname;
@@ -40,8 +43,10 @@ public class PriceBooksPage {
 	private WebElement currency;
 	
 	public void getCurrency() {
-		Select s= new Select(currency);
-		s.selectByIndex(0);
+		By currencyLocator = By.name("currency_id");
+	    WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(currencyLocator));
+	    Select s = new Select(dropdown);
+	    s.selectByIndex(0);
 	}
 	
 	@FindBy(xpath="//input[@title='Save [Alt+S]']")
