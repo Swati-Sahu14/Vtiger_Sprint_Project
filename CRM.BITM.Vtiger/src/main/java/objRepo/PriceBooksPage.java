@@ -55,7 +55,9 @@ public class PriceBooksPage {
 	private WebElement pricebooklink;
 	
 	public void getpricebooklink() {
-		pricebooklink.click();
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    By priceBookLink = By.xpath("(//a[text()='Price Books'])[3]");
+	    wait.until(ExpectedConditions.elementToBeClickable(priceBookLink)).click();
 	}
 	
 	@FindBy(name="search_text")

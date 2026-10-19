@@ -263,7 +263,8 @@ public class VendorsPage {
  // Click Duplicate Vendor
     public void clickDuplicate() {
         wait.until(ExpectedConditions.elementToBeClickable(duplicateButton)).click();
-        wait.until(ExpectedConditions.visibilityOf(vendorNameField));
+        By vendorNameLocator = By.name("vendorname");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(vendorNameLocator));
         Reporter.log("Duplicate Vendor form opened.", true);
     }
 
