@@ -299,7 +299,9 @@ public class PurchasePage {
 	private WebElement purchaseLink;
 	
 	public void getpurchaseLink() {
-		purchaseLink.click();
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    By purchaseOrderLocator = By.xpath("(//a[normalize-space()='Purchase Order'])[3]");
+	    wait.until(ExpectedConditions.elementToBeClickable(purchaseOrderLocator)).click();
 	}
 	
 	@FindBy(css="[title='Purchase Order']")
