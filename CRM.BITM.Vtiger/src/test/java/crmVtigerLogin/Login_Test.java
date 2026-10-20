@@ -11,6 +11,7 @@ import objRepo.LoginPage;
 
 public class Login_Test extends BaseClass {
 
+	// Verifies that login is successful with valid credentials
     @Test(priority = 1,groups = {"FUN", "POS"})
     public void validLoginTest() throws Exception {
     		

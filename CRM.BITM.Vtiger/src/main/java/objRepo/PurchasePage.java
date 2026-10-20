@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +15,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import genricUtility.ScreenshotUtility;
 
 public class PurchasePage {
 
@@ -26,16 +29,14 @@ public class PurchasePage {
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
-
-    // Purchase Order Subject
+    
+    // Purchase Order creation
     @FindBy(name = "subject")
     private WebElement subjectField;
 
-    // Purchase Order Status dropdown
     @FindBy(name = "postatus")
     private WebElement statusDropdown;
 
-    // Assigned To dropdown
     @FindBy(name = "assigned_user_id")
     private WebElement assignedToDropdown;
 
@@ -45,27 +46,37 @@ public class PurchasePage {
     @FindBy(name = "ship_street")
     private WebElement shippingAddressField;
 
-    // Product Name field
     @FindBy(name = "productName1")
     private WebElement productNameField;
 
-    // Product lookup icon
     @FindBy(id = "searchIcon1")
     private WebElement productSearchIcon;
 
-    // Product Quantity
     @FindBy(name = "qty1")
     private WebElement quantityField;
+    
+    @FindBy(name = "assigned_user_id")
+    private WebElement AssignedId;
+    
+    public void getAssignedId() {
+    		Select s = new Select(AssignedId);
+    		s.selectByIndex(4);
+    }
+    
+    @FindBy(name = "postatus")
+    private WebElement status;
+    
+    public void getstatus() {
+    		Select s = new Select(status);
+    		s.selectByIndex(1);
+    }
 
- // Purchase Order Save button
     @FindBy(xpath = "(//input[@title='Save [Alt+S]'])[2]")
     private WebElement saveButton;
 
- // Laptop link in the Purchase Order product popup
     @FindBy(id = "popup_product_113449")
     private WebElement laptopProductLink;
 
-    // Enter the Purchase Order subject from Excel
     public void enterSubject(String subject) {
         wait.until(ExpectedConditions.visibilityOf(subjectField));
         subjectField.clear();
@@ -73,8 +84,6 @@ public class PurchasePage {
         Reporter.log("Purchase Order subject entered: " + subject, true);
     }
 
-
-    // Log available Status options and select the required index
     public void selectStatus() {
         wait.until(ExpectedConditions.elementToBeClickable(statusDropdown));
         Select select = new Select(statusDropdown);
@@ -88,8 +97,6 @@ public class PurchasePage {
         Reporter.log("Selected Status: "+ select.getFirstSelectedOption().getText().trim(),true);
     }
 
-
-    // Log available Assigned To options and select an option by index
     public void selectAssignedTo() {
         wait.until(ExpectedConditions.elementToBeClickable(assignedToDropdown));
         Select select = new Select(assignedToDropdown);
@@ -100,12 +107,11 @@ public class PurchasePage {
         Reporter.log("Selected Assigned To: " + selectedOption, true);
     }
 
- // Select Laptop from the Purchase Order product popup
     public void selectLaptopProduct() {
         wait.until(ExpectedConditions.elementToBeClickable(laptopProductLink)).click();
         Reporter.log("Laptop selected from the product popup.", true);
     }
- // Enter Billing Address
+
     public void enterBillingAddress(String billingAddress) {
         wait.until(ExpectedConditions.visibilityOf(billingAddressField));
         billingAddressField.clear();
@@ -113,7 +119,6 @@ public class PurchasePage {
         Reporter.log("Billing Address entered: " + billingAddress, true);
     }
 
-    // Enter Shipping Address
     public void enterShippingAddress(String shippingAddress) {
         wait.until(ExpectedConditions.visibilityOf(shippingAddressField));
         shippingAddressField.clear();
@@ -139,15 +144,13 @@ public class PurchasePage {
 	    if (organizations.isEmpty()) {
 	        throw new RuntimeException("No organizations found in popup");
 	    }
-	    // Click the organization
 	    organizations.get(0).click();
 	    Thread.sleep(1000);
-	    // Switch back to the main quote window
 	    driver.switchTo().window(parentWindow);
     }
 
 
-    // Verify the selected product name
+    // Purchase Order verification
     public void verifyProductName(String expectedProductName) {
         wait.until(ExpectedConditions.visibilityOf(productNameField));
         String actualProductName = productNameField.getAttribute("value");
@@ -155,8 +158,6 @@ public class PurchasePage {
         Reporter.log("Product selected: " + actualProductName, true);
     }
 
-
-    // Enter product quantity from Excel
     public void enterQuantity(String quantity) {
         wait.until(ExpectedConditions.visibilityOf(quantityField));
         quantityField.clear();
@@ -164,13 +165,12 @@ public class PurchasePage {
         Reporter.log("Product quantity entered: " + quantity, true);
     }
 
-
-    // Save the Purchase Order
     public void clickSave() {
         wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();
         Reporter.log("Purchase Order Save button clicked.", true);
     }
     
+    // Popup handling
     public String switchToProductPopup() {
         String parentWindow = driver.getWindowHandle();
         Set<String> allWindows = driver.getWindowHandles();
@@ -197,7 +197,7 @@ public class PurchasePage {
         Reporter.log("Purchase Order form closed after save.", true);
     }
     
-    //purchasePage
+    //Purchase Order navigation
     @FindBy(xpath="//img[@title='Create Purchase Order...']")
     private WebElement CreatePurchaseIcon;
     
@@ -212,7 +212,6 @@ public class PurchasePage {
 	    	String parentWindow = driver.getWindowHandle();
 		    vendorIcon.click();
 		    wait.until(ExpectedConditions.numberOfWindowsToBe(2));
-		    // Switch to the organization popup
 		    for (String window : driver.getWindowHandles()) {
 		        if (!window.equals(parentWindow)) {
 		            driver.switchTo().window(window);
@@ -225,29 +224,12 @@ public class PurchasePage {
 		    if (organizations.isEmpty()) {
 		        throw new RuntimeException("No organizations found in popup");
 		    }
-		    // Click the organization
 		    organizations.get(0).click();
 		    Thread.sleep(1000);
-		    // Switch back to the main quote window
 		    driver.switchTo().window(parentWindow);
 	  }
     
-    @FindBy(name = "assigned_user_id")
-    private WebElement AssignedId;
-    
-    public void getAssignedId() {
-    		Select s = new Select(AssignedId);
-    		s.selectByIndex(4);
-    }
-    
-    @FindBy(name = "postatus")
-    private WebElement status;
-    
-    public void getstatus() {
-    		Select s = new Select(status);
-    		s.selectByIndex(1);
-    }
-    
+   
     public void getproductSearchIcon() throws InterruptedException {
     	String parentWindow = driver.getWindowHandle();
     		productSearchIcon.click();
@@ -321,7 +303,7 @@ public class PurchasePage {
     		Reporter.log("Purchase Order is created",true);
     } 
     
-    //regression
+    // Purchase Order update
     @FindBy(xpath="//a[@title='Purchase Order']")
     private WebElement product1;
     
@@ -364,5 +346,5 @@ public class PurchasePage {
 		for(WebElement ele:allrecords) {
 			Reporter.log("Edited Orders: "+ele.getText(),true);
 		}
-	}
+	}	
 }

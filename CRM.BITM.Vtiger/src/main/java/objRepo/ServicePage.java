@@ -11,11 +11,13 @@ import org.testng.Reporter;
 public class ServicePage {
 	WebDriver driver ;
 	
+	// Constructor
 	public ServicePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver , this);
 	}
 	
+	// Service creation
 	@FindBy(xpath ="//img[@title='Create Service...']")
 	private WebElement createIcon;
 	
@@ -31,8 +33,10 @@ public class ServicePage {
 		Reporter.log("Create Service Page opens Successfully",true);
 	}
 	
+	// Service verification
 	@FindBy(css = "[title='Services']")
 	private List<WebElement> services;
+	
 	public void servicesname() {
 		for (WebElement service : services) {
 			service.click();
@@ -42,12 +46,15 @@ public class ServicePage {
 	
 	@FindBy(id = "dtlview_Active")
 	private WebElement verifyActive;
+	
 	public void getverifyactivecheck() {
 		Reporter.log("Active Status:"+verifyActive.getText(),true);
 	}
 	
+	// Service update
 	@FindBy(xpath = "//input[@title='Edit [Alt+E]']")
 	private WebElement editlink;
+	
 	public void getEditlink() throws Exception {
 		editlink.click();
 		Thread.sleep(1000);

@@ -8,6 +8,7 @@ import objRepo.HomePage;
 import objRepo.PurchasePage;
 
 public class PurchaseOrder_Test extends BaseClass {
+	// Verifies that a Purchase Order can be created successfully
 	@Test(priority = 1,groups = {"FUN", "POS"},dataProvider = "purchase", dataProviderClass = DataProviderClass.class)
 		public void verifyPurchaseOrderCreation_Test(String subject,String billingAddress,String shippingAddress,String quantity) throws Exception {
 			login();
@@ -34,6 +35,7 @@ public class PurchaseOrder_Test extends BaseClass {
 		
 		}
 
+	// Verifies that editing one Purchase Order does not affect another
 	 @Test(priority = 2, groups = {"REG", "POS"},dataProvider = "newPurchase", dataProviderClass = DataProviderClass.class)
 	    public void verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test(String newName)throws Exception {
 

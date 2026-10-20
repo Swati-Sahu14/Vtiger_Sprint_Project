@@ -10,11 +10,13 @@ public class LoginPage {
 
 	WebDriver d;
 
+	// Constructor
 	public LoginPage(WebDriver d) {
 		this.d = d;
 		PageFactory.initElements(d , this);
 	}
 	
+	// Login fields and buttons
 	@FindBy(name = "user_name")
 	private WebElement un;
 	
@@ -55,14 +57,13 @@ public class LoginPage {
 		Reporter.log("Login Successful", true);
 	}
 	
-	// Perform login using the given username and password
+	// Perform login using the given credentials
 	public void login(String username, String password) {
 	    getUn(username);
 	    getPw(password);
 	    getlogin();
 	}
 		
-	// Verify and report the error message for invalid login
 	public void getErrorMessage()
 	{
 		Assert.assertTrue(message.isDisplayed(),"Error message is not displayed");

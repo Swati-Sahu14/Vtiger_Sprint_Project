@@ -8,18 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class ScreenshotUtility {
-
-    public static void takeScreenshot(WebDriver d, String name)
-            throws IOException {
-
-        // Capture screenshot
-        TakesScreenshot tks = (TakesScreenshot) d;
+	
+	// Captures and saves a screenshot of the current browser
+    public static void takeScreenshot(WebDriver driver, String name)throws IOException {
+        TakesScreenshot tks = (TakesScreenshot) driver;
         File src = tks.getScreenshotAs(OutputType.FILE);
-
-        // Set destination path
         File des = new File("./Screenshots/" + name + ".png");
-
-        // Copy screenshot to folder
         FileHandler.copy(src, des);
         System.out.println("Screenshot saved successfully: "+ des.getAbsolutePath());
     }

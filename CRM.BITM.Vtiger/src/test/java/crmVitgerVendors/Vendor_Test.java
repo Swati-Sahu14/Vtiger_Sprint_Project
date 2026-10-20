@@ -1,5 +1,6 @@
 package crmVitgerVendors;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import baseClass.BaseClass;
@@ -18,6 +19,7 @@ public class Vendor_Test extends BaseClass {
 	    HomePage home = new HomePage(driver);
 	    home.getMorelink();
 	    home.getVendorslink();
+	    Assert.assertTrue(driver.getCurrentUrl().contains("module=Vendors"), "Vendors List Page is not displayed");
 	}
 	
 	// Verifies that the Create New Vendor form opens successfully

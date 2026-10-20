@@ -10,6 +10,7 @@ public class LogoutPage {
 
 	WebDriver driver;
 	
+	// Constructor
 	public LogoutPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

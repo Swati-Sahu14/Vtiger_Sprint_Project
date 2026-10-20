@@ -9,6 +9,7 @@ import objRepo.PriceBooksPage;
 
 public class PriceBooks_Test extends BaseClass {
 
+	// Verifies that an Price Book currency can be updated successfully
 	@Test(priority = 1,groups = {"FUN", "POS"},dataProvider = "priceBookEditData",dataProviderClass = DataProviderClass.class)
 		public void verifyPriceBookCanBeEdited_Test(String currency) throws Exception {
 		    login();
@@ -27,6 +28,7 @@ public class PriceBooks_Test extends BaseClass {
 		    p.verifycurrency();
 	}    
 	
+	// Verifies that the selected currency is saved correctly when creating a Price Book
 	@Test(priority = 2,groups = {"INT", "POS"},dataProvider = "priceBookIntegrationData",dataProviderClass = DataProviderClass.class)
 		public void verifyCurrencyRetainedAfterCreation_Test(String bookName, String currencyName) throws Exception {
 

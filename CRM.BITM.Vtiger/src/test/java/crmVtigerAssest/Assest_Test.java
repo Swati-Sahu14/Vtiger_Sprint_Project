@@ -4,10 +4,13 @@ import org.testng.annotations.Test;
 
 import baseClass.BaseClass;
 import genricUtility.DataProviderClass;
+import genricUtility.ScreenshotUtility;
 import objRepo.AssetPage;
 import objRepo.HomePage;
 
 public class Assest_Test extends BaseClass {
+	
+	// Verifies that the Create New Asset form opens successfully
 	@Test(priority = 1, groups = {"SMK", "POS"})
 	public void verifyCreateAssestFormOpens_Test() throws Exception {
 	    login();
@@ -19,6 +22,7 @@ public class Assest_Test extends BaseClass {
 	    a.verifycreatingassest();
 	}
 	
+	// Verifies that an asset can be created with valid details
 	@Test(priority = 2, groups = {"FUN", "POS"},dataProvider ="newAsset",dataProviderClass = DataProviderClass.class)
 	public void verifyAssetStatusCanBeChangedAndSaved_Test(String no,String name) throws Exception {
 	    login();
@@ -39,6 +43,7 @@ public class Assest_Test extends BaseClass {
 	    a.getsearchnowbtn();
 	}
 	
+	// Verifies that an existing invoice can be associated with an asset
 	@Test(priority = 3, groups = {"INT", "POS"},dataProvider ="newAsset",dataProviderClass = DataProviderClass.class)
 	public void verifyExistingInvoiceCanBeAssociatedWithAsset_Test(String no,String name)
 	        throws Exception {
@@ -60,6 +65,8 @@ public class Assest_Test extends BaseClass {
 	    a.verifyAssetPresent(name);
 	    logout();
 	}
+	
+	// Verifies asset details after re-login
 	@Test(priority = 4, groups = {"SYS", "POS"},dataProvider ="newAsset",dataProviderClass = DataProviderClass.class)
 	public void verifyAssetInformationPersistsAfterRelogin_Test(String no,String name) throws Exception {
 		login();
@@ -83,6 +90,7 @@ public class Assest_Test extends BaseClass {
 	    a.verifyAssetPresent(name);	
 	}
 	
+	 // Verifies that cancelling asset changes does not save the updated name
 	@Test(priority = 5,groups = {"REG", "POS"},dataProvider = "updatedAssetName",dataProviderClass = DataProviderClass.class)
 		public void verifyCancelDoesNotSaveAssetChanges_Test(String existingName, String updatedName) throws Exception {
 		    login();
@@ -102,8 +110,7 @@ public class Assest_Test extends BaseClass {
 		    a.getsearchIn();
 		    a.getsearchnowbtn();
 		    a.verifyUpdatedAssetNotPresent(updatedName);
-		  //  ScreenshotUtility.takeScreenshot(driver, "CancelDoesNotSaveAssetChanges");
+		    ScreenshotUtility.takeScreenshot(driver, "CancelDoesNotSaveAssetChanges");
 		    logout();
-		}
-	
+	}
 }

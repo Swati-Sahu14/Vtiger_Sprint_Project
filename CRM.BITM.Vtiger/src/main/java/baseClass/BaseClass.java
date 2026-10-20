@@ -2,7 +2,6 @@ package baseClass;
 
 import java.io.IOException;
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,11 +21,9 @@ import genricUtility.WebDriverUtility;
 import objRepo.LoginPage;
 import objRepo.LogoutPage;
 
-
 public class BaseClass {
 
-	public WebDriver driver;
-    
+	public WebDriver driver;    
     @BeforeSuite(alwaysRun = true)
     public void bs() {
         Reporter.log("Open Database", true);
@@ -47,6 +44,7 @@ public class BaseClass {
         Reporter.log("PostCondition", true);
     }
 
+    // Launch the browser and open the application before each test
     @BeforeMethod (alwaysRun = true)
     @Parameters("browser")
     public void bc(@Optional("chrome") String browser) throws IOException, InterruptedException {
@@ -60,18 +58,27 @@ public class BaseClass {
         Reporter.log("Application launched", true);
     }
 
+//    @AfterMethod(alwaysRun = true)
+//    public void ac() {
+//        Reporter.log("Test completed", true);
+//        if (driver != null) {
+//            try {
+//                driver.quit();
+//                Reporter.log("Browser closed successfully", true);
+//            } catch (Exception e) {
+//                Reporter.log("Error while closing browser: " + e.getMessage(),true);
+//            } finally {
+//                driver = null;
+//            }
+//        }
+//    }
+    
     @AfterMethod(alwaysRun = true)
     public void ac() {
-        Reporter.log("Test completed", true);
         if (driver != null) {
-            try {
-                driver.quit();
-                Reporter.log("Browser closed successfully", true);
-            } catch (Exception e) {
-                Reporter.log("Error while closing browser: " + e.getMessage(),true);
-            } finally {
-                driver = null;
-            }
+            driver.quit();
+            driver = null;
+            Reporter.log("Browser closed successfully.", true);
         }
     }
     

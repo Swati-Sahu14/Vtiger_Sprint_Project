@@ -3,18 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="crmVtigerPurchaseOrder.PurchaseOrder_Test">
+      <class name="crmVitgerVendors.Vendor_Test">
         <methods>
-          <include name="verifyPurchaseOrderCreation_Test" invocation-numbers="0"/>
+          <include name="verifyVendorNameMandatory_Test"/>
           <include name="at"/>
           <include name="bc"/>
           <include name="bs"/>
           <include name="ac"/>
           <include name="bt"/>
           <include name="as"/>
-          <include name="verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test" invocation-numbers="0"/>
         </methods>
-      </class> <!-- crmVtigerPurchaseOrder.PurchaseOrder_Test -->
+      </class> <!-- crmVitgerVendors.Vendor_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

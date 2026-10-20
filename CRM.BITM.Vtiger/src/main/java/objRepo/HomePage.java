@@ -11,10 +11,13 @@ public class HomePage {
 
 	WebDriver driver ;
 	
+	// Constructor
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver , this);
 	}
+	
+	// Navigation links
 	
 	@FindBy(xpath = "//a[text()='More']")
 	private WebElement morelink;

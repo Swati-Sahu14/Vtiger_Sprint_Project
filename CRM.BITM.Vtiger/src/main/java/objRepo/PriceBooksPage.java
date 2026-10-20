@@ -19,12 +19,14 @@ public class PriceBooksPage {
     WebDriver driver;
     private WebDriverWait wait;
     
-
+    // Constructor
 	public PriceBooksPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
+	
+	// Price Book navigation
 	@FindBy(xpath="(//a[@title='Price Books'])[4]")
 	private WebElement pricebookname;
 	
@@ -56,6 +58,7 @@ public class PriceBooksPage {
 		savebtn.click();
 	}
 	
+	// Price Book search
 	@FindBy(xpath ="(//a[text()='Price Books'])[3]")
 	private WebElement pricebooklink;
 	
@@ -88,6 +91,7 @@ public class PriceBooksPage {
 		Thread.sleep(2000);
 	}
 	
+	// Price Book creation
 	@FindBy(xpath = "//img[@title='Create Price Book...']")
 	private WebElement createPriceBookButton;
 	
@@ -106,6 +110,7 @@ public class PriceBooksPage {
 	s.selectByVisibleText(currencyName);
 	}
 	
+	//verification
 	@FindBy(css="[title='Price Books']")
 	private List<WebElement> orders;
 	
@@ -126,7 +131,6 @@ public class PriceBooksPage {
 	public void searchCreatedPriceBook(String bookName) {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
 	    wait.until(ExpectedConditions.visibilityOf(searchfield));
 	    searchfield.clear();
 	    searchfield.sendKeys(bookName);
