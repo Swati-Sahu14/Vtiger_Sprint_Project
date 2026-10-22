@@ -259,7 +259,6 @@ public class VendorsPage {
     }
     
     // More Information tab   
-   // @FindBy(xpath = "//a[normalize-space(.)='More Information']")
     @FindBy(xpath = "//a[text()='More Information']")
     private WebElement moreInformationTab;
     
@@ -297,9 +296,6 @@ public class VendorsPage {
     }
     
     // Purchase Order section
-    
-//    @FindBy(id = "show_Vendors_Products")
-//    private WebElement productsSection;
      
     @FindBy(xpath = "//a[normalize-space()='Create Purchase Order']")
     private WebElement createPurchaseOrderLink;
@@ -311,9 +307,6 @@ public class VendorsPage {
     
     @FindBy(id = "show_Vendors_PurchaseOrder")
     private WebElement purchaseOrderSectionArrow;
-    
-//    @FindBy(id = "show_Vendors_PurchaseOrder")
-//    private WebElement purchaseOrderSection;
     
  	public void clickPurchaseOrderSectionArrow() {
  		wait.until(ExpectedConditions.elementToBeClickable(purchaseOrderSectionArrow)).click();
@@ -349,9 +342,6 @@ public class VendorsPage {
  	@FindBy(id = "show_Vendors_Contacts")
     private WebElement contactsSectionArrow;
  	
-// 	@FindBy(id = "show_Vendors_Contacts")
-//    private WebElement contactsSection;
-   
   	public void clickContactsSectionArrow() {
   		wait.until(ExpectedConditions.elementToBeClickable(contactsSectionArrow)).click();
   		Reporter.log("Contacts section expanded.", true);
@@ -472,8 +462,11 @@ public class VendorsPage {
 
     // Opens the edit form
     public void clickEdit() {
-        By editButton = By.xpath("//input[@name='Edit' or @title='Edit [Alt+E]']");
-        wait.until(ExpectedConditions.elementToBeClickable(editButton)).click();
+        By editButton = By.xpath("//input[@name='Edit']");
+        WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(editButton));
+        wait.until(ExpectedConditions.elementToBeClickable(editButton));
+        button.click();
+        Reporter.log("Clicked on Edit button", true);
     }
     
  	public void alertmessage() {

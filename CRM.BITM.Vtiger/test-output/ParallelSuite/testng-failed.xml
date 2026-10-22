@@ -3,14 +3,36 @@
 <suite parallel="classes" name="Failed suite [ParallelSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="Parallel Testing(failed)">
     <classes>
-      <class name="crmVtigerAssest.Assest_Test">
+      <class name="crmVitgerVendors.Vendor_Test">
         <methods>
-          <include name="verifyCancelDoesNotSaveAssetChanges_Test" invocation-numbers="0"/>
+          <include name="verifyCreateVendorFormOpens_Test"/>
           <include name="at"/>
           <include name="bs"/>
           <include name="bc"/>
           <include name="bt"/>
+          <include name="as"/>
           <include name="ac"/>
+        </methods>
+      </class> <!-- crmVitgerVendors.Vendor_Test -->
+      <class name="crmVtigerPurchaseOrder.PurchaseOrder_Test">
+        <methods>
+          <include name="at"/>
+          <include name="bs"/>
+          <include name="bc"/>
+          <include name="verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test" invocation-numbers="0"/>
+          <include name="bt"/>
+          <include name="as"/>
+          <include name="ac"/>
+        </methods>
+      </class> <!-- crmVtigerPurchaseOrder.PurchaseOrder_Test -->
+      <class name="crmVtigerAssest.Assest_Test">
+        <methods>
+          <include name="verifyExistingInvoiceCanBeAssociatedWithAsset_Test" invocation-numbers="0"/>
+          <include name="at"/>
+          <include name="bc"/>
+          <include name="bs"/>
+          <include name="ac"/>
+          <include name="bt"/>
           <include name="as"/>
         </methods>
       </class> <!-- crmVtigerAssest.Assest_Test -->

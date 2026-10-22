@@ -1,19 +1,25 @@
 package objRepo;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 public class HomePage {
 
 	WebDriver driver ;
+	private WebDriverWait wait;
 	
 	// Constructor
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		PageFactory.initElements(driver , this);
 	}
 	
@@ -39,7 +45,7 @@ public class HomePage {
 
 	
 	public void getMorelink() {
-		morelink.click();
+	    wait.until(ExpectedConditions.elementToBeClickable(morelink)).click();
 	}
 	
 	public void verifyHome() {
@@ -73,8 +79,20 @@ public class HomePage {
 	}
 
 	public void getVendorslink() {
-		vendorslink.click();
-		Assert.assertTrue(driver.getTitle().contains("ACOE Fireflink - Vendors"),"Vendors page is not displayed");
-		Reporter.log("Vendors page is displayed" , true);
+
+	    wait.until(ExpectedConditions.elementToBeClickable(vendorslink));
+
+	    vendorslink.click();
+
+	    wait.until(ExpectedConditions.urlContains("module=Vendors"));
+
+	    Assert.assertTrue(
+	        driver.getTitle().contains("ACOE Fireflink - Vendors"),
+	        "Vendors page is not displayed"
+	    );
+
+	    Reporter.log("Vendors page is displayed", true);
 	}
+
+
 }

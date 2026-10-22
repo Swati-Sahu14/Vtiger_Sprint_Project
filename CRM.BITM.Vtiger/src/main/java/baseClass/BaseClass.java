@@ -58,21 +58,6 @@ public class BaseClass {
         Reporter.log("Application launched", true);
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void ac() {
-//        Reporter.log("Test completed", true);
-//        if (driver != null) {
-//            try {
-//                driver.quit();
-//                Reporter.log("Browser closed successfully", true);
-//            } catch (Exception e) {
-//                Reporter.log("Error while closing browser: " + e.getMessage(),true);
-//            } finally {
-//                driver = null;
-//            }
-//        }
-//    }
-    
     @AfterMethod(alwaysRun = true)
     public void ac() {
         if (driver != null) {

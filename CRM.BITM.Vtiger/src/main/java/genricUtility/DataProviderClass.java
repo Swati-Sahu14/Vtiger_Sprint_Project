@@ -151,4 +151,10 @@ public class DataProviderClass {
 	public Object[][] getInvalidVendorEmail() {
 	    return new Object[][] {{"InvalidEmailVendor01", "invalid-email"}};
 	}
+	
+	@DataProvider(name = "QtyBVA")
+	public Object[][] purchaseOrderQtyBVA() throws IOException {
+	    return readExcelData("QtyBVA", 1, 6);
+	}
+
 }

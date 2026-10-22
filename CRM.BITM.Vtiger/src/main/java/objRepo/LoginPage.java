@@ -1,8 +1,12 @@
 package objRepo;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -26,7 +30,7 @@ public class LoginPage {
 	@FindBy(id = "submitButton")
 	private WebElement loginBtn;
 	
-	@FindBy(xpath = "//a[@class='hdrLink']")
+	@FindBy(xpath ="//a[@class='hdrLink']")
 	private WebElement verify;
 	
 	@FindBy(css = "[class='errorMessage']")
@@ -47,9 +51,19 @@ public class LoginPage {
 	}
 
 	public void getLoginBtn() {
-		loginBtn.click();
-		Assert.assertTrue(verify.getText().contains("Home"), "Login is not sucessful");
-		Reporter.log("Login Successful", true);
+	    WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+
+	    wait.until(ExpectedConditions.visibilityOf(un));
+	    wait.until(ExpectedConditions.visibilityOf(pw));
+
+	    wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
+
+	    wait.until(ExpectedConditions.urlContains("module=Home"));
+
+	    Assert.assertTrue(d.getCurrentUrl().contains("module=Home"),
+	            "Login is not successful");
+
+	    Reporter.log("Login Successful", true);
 	}
 	
 	public void getlogin() {

@@ -1,5 +1,6 @@
 package objRepo;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -88,9 +89,6 @@ public class PurchasePage {
         wait.until(ExpectedConditions.elementToBeClickable(statusDropdown));
         Select select = new Select(statusDropdown);
         List<WebElement> options = select.getOptions();
-        for (int i = 0; i < options.size(); i++) {
-            Reporter.log("Status option index " + i + ": "+ options.get(i).getText().trim(),true);
-        }
         Assert.assertTrue(options.size() > 1,"Status dropdown does not contain an option at index 1.");
         select.selectByIndex(1);
         wait.until(driver ->select.getFirstSelectedOption().isSelected());
@@ -346,5 +344,20 @@ public class PurchasePage {
 		for(WebElement ele:allrecords) {
 			Reporter.log("Edited Orders: "+ele.getText(),true);
 		}
-	}	
+	}
+	// Verify the validation alert for invalid Qty values
+	public String verifyInvalidQtyAlert() throws IOException {
+
+	    String actualAlert = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.alertIsPresent()).getText();
+	    driver.switchTo().alert().accept();
+	    Reporter.log("Qty validation alert displayed: " + actualAlert, true);
+	    Assert.assertTrue(actualAlert.equals("Invalid Qty")|| actualAlert.equals("Qty should be greater than 0"),"Unexpected validation alert: " + actualAlert);
+	    return "Reject";
+	}
+	// Verify successful submission for a valid Qty
+	public String verifyValidQtySubmission() {
+	    waitForPurchaseOrderFormToClose();
+	    Reporter.log("Purchase Order form closed after saving valid Qty.", true);
+	    return "Accept";
+	}
 }

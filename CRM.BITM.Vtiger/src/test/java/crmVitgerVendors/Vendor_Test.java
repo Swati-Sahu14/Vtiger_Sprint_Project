@@ -34,7 +34,7 @@ public class Vendor_Test extends BaseClass {
 	    vendor.verifyCreateVendorForm();
 	}
 	
-	//Verifies that a vendor is created successfully with valid details and the saved record displays the entered information
+	//Verifies that a vendor is created successfully with valid details
 	@Test(priority = 3,groups = {"FUN", "POS"},dataProvider = "vendorData",dataProviderClass = DataProviderClass.class)
 	public void createVendorWithValidDetails_Test(String vendorName,String email,String phone,String website,String category,String street,String poBox,String city,String state,String postalCode,String country,String description) throws Exception {
 	    login();
@@ -257,4 +257,30 @@ public class Vendor_Test extends BaseClass {
 		    ScreenshotUtility.takeScreenshot(driver,"VendorCreationWithInvalidEmail");
 		    logout();
 		}
+	
+	// Verify Purchase Order Qty using Boundary Value Analysis
+	@Test(priority = 15,groups = {"FUN", "BVA"},dataProvider = "QtyBVA",dataProviderClass = DataProviderClass.class)
+	public void verifyPurchaseOrderQtyBVA_Test(String subject,String vendorName,String billingAddress,String shippingAddress,String quantity,String expectedResult) throws Exception {
+
+	    login();
+	    HomePage home = new HomePage(driver);
+	    home.getMorelink();
+	    home.getVendorslink();
+	    VendorsPage vendor = new VendorsPage(driver);
+	    vendor.openVendor(vendorName);
+	    vendor.clickCreatePurchaseOrder();
+	    PurchasePage purchase = new PurchasePage(driver);
+	    purchase.enterSubject(subject);
+	    purchase.selectStatus();
+	    purchase.selectAssignedTo();
+	    purchase.enterBillingAddress(billingAddress);
+	    purchase.enterShippingAddress(shippingAddress);
+	    purchase.clickProductSearchIcon();
+	    purchase.enterQuantity(quantity);
+	    purchase.clickSave();
+	    String actualResult = expectedResult.equals("Reject")? purchase.verifyInvalidQtyAlert(): purchase.verifyValidQtySubmission();
+	    Assert.assertEquals(actualResult,expectedResult,"Unexpected validation result for Qty: " + quantity);
+	    ScreenshotUtility.takeScreenshot(driver, "QtyBVA_" + quantity.replace("-", "Negative"));
+	    logout();
+	}
 }
