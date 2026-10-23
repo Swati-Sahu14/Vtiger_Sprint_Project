@@ -1,0 +1,383 @@
+<html>
+<head>
+<title>TestNG:  Functional Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Functional Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 23 01:53:28 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>643 seconds (643895 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>FUN </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='crmVtigerLogin.Login_Test.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: crmVtigerLogin.Login_Test<br>Parameters: lkjhgf, <br/>
+<a href="#Output-2047147687" onClick='toggleBox("Output-2047147687", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2047147687" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2047147687">
+Login Successful<br/>
+Username: lkjhgf<br/>
+Password: <br/>
+Error Message: You must specify a valid username and password.<br/>
+Invalid login validation completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>crmVtigerLogin.Login_Test@5542c4ed</td></tr>
+<tr>
+<td title='crmVtigerAssest.Assest_Test.verifyAssetStatusCanBeChangedAndSaved_Test()'><b>verifyAssetStatusCanBeChangedAndSaved_Test</b><br>Test class: crmVtigerAssest.Assest_Test<br>Parameters: 456, New_Assest01<br/>
+<a href="#Output-1859142611" onClick='toggleBox("Output-1859142611", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1859142611" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1859142611">
+Login Successful<br/>
+Assets page is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>crmVtigerAssest.Assest_Test@1f2586d6</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.updateVendorWebsite_Test()'><b>updateVendorWebsite_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor01, https://updated-example.com<br/>
+<a href="#Output-302241671" onClick='toggleBox("Output-302241671", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-302241671" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-302241671">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Clicked on Edit button<br/>
+Vendor details saved successfully.<br/>
+Vendor website updated: https://updated-example.com<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerLogin.Login_Test.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: crmVtigerLogin.Login_Test<br>Parameters: , asdfgh<br/>
+<a href="#Output-1955049794" onClick='toggleBox("Output-1955049794", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1955049794" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1955049794">
+Login Successful<br/>
+Username: <br/>
+Password: asdfgh<br/>
+Error Message: You must specify a valid username and password.<br/>
+Invalid login validation completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>crmVtigerLogin.Login_Test@5542c4ed</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.verifyPurchaseOrderQtyBVA_Test()'><b>verifyPurchaseOrderQtyBVA_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: BVA_PO_ZERO, UniqueVendor02, Bangalore, Bangalore, 0, Reject<br/>
+<a href="#Output-921270604" onClick='toggleBox("Output-921270604", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-921270604" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-921270604">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Create Purchase Order clicked.<br/>
+Purchase Order subject entered: BVA_PO_ZERO<br/>
+Selected Status: Approved<br/>
+Selected Assigned To: ACOE Fireflink<br/>
+Billing Address entered: Bangalore<br/>
+Shipping Address entered: Bangalore<br/>
+Product quantity entered: 0<br/>
+Purchase Order Save button clicked.<br/>
+Qty validation alert displayed: Qty should be greater than 0<br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerPriceBooks.PriceBooks_Test.verifyPriceBookCanBeEdited_Test()'><b>verifyPriceBookCanBeEdited_Test</b><br>Test class: crmVtigerPriceBooks.PriceBooks_Test<br>Parameters: USA, Dollars<br/>
+<a href="#Output-2062184524" onClick='toggleBox("Output-2062184524", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2062184524" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2062184524">
+Login Successful<br/>
+Price page is displayed<br/>
+Updated Price Book Name is displayed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>crmVtigerPriceBooks.PriceBooks_Test@3fc2959f</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.verifyPurchaseOrderQtyBVA_Test()'><b>verifyPurchaseOrderQtyBVA_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: BVA_PO_NEG, UniqueVendor01, Bangalore, Bangalore, -1, Reject<br/>
+<a href="#Output-1271196739" onClick='toggleBox("Output-1271196739", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1271196739" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1271196739">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Create Purchase Order clicked.<br/>
+Purchase Order subject entered: BVA_PO_NEG<br/>
+Selected Status: Approved<br/>
+Selected Assigned To: ACOE Fireflink<br/>
+Billing Address entered: Bangalore<br/>
+Shipping Address entered: Bangalore<br/>
+Product quantity entered: -1<br/>
+Purchase Order Save button clicked.<br/>
+Qty validation alert displayed: Invalid Qty<br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.createVendorWithValidDetails_Test()'><b>createVendorWithValidDetails_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor01, unique01@example.com, 9876543210, https://uniquevendor01.com, Software, 12 MG Road, PO101, Bengaluru, Karnataka, 560001, India, Software vendor test record 01<br/>
+<a href="#Output-593792301" onClick='toggleBox("Output-593792301", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-593792301" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-593792301">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Create Vendor form opened successfully.<br/>
+Vendor details saved successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerLogin.Login_Test.validLoginTest()'><b>validLoginTest</b><br>Test class: crmVtigerLogin.Login_Test<br/>
+<a href="#Output-753426788" onClick='toggleBox("Output-753426788", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-753426788" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-753426788">
+Login Successful<br/>
+Home Page Title: ACOE Fireflink - Home - vtiger CRM 5 - Commercial Open Source CRM<br/>
+Current URL: http://49.249.29.4:8888/index.php?action=index&module=Home<br/>
+Login successful<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>crmVtigerLogin.Login_Test@5542c4ed</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.duplicateVendor_Test()'><b>duplicateVendor_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor01, UniqueVendor01_Copy<br/>
+<a href="#Output-283920161" onClick='toggleBox("Output-283920161", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-283920161" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-283920161">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Duplicate Vendor form opened.<br/>
+Vendor details saved successfully.<br/>
+Duplicate vendor saved: UniqueVendor01_Copy<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.verifyMoreInformationTab_Test()'><b>verifyMoreInformationTab_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor01, UniqueVendor01_Copy<br/>
+<a href="#Output-63051919" onClick='toggleBox("Output-63051919", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-63051919" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-63051919">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+More Information tab clicked successfully.<br/>
+More Information page displays Products, Purchase Order, Contacts, and Email sections.<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.createVendorWithValidDetails_Test()'><b>createVendorWithValidDetails_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor03, unique03@example.com, 9876543212, https://uniquevendor03.com, Electronics, 8 Main Road, PO103, Hubballi, Karnataka, 580020, India, Electronics vendor test record 03<br/>
+<a href="#Output-1954745715" onClick='toggleBox("Output-1954745715", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1954745715" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1954745715">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Create Vendor form opened successfully.<br/>
+Vendor details saved successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerLogin.Login_Test.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: crmVtigerLogin.Login_Test<br>Parameters: swati, swati124<br/>
+<a href="#Output-52354732" onClick='toggleBox("Output-52354732", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-52354732" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-52354732">
+Login Successful<br/>
+Username: swati<br/>
+Password: swati124<br/>
+Error Message: You must specify a valid username and password.<br/>
+Invalid login validation completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>crmVtigerLogin.Login_Test@5542c4ed</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.createVendorWithValidDetails_Test()'><b>createVendorWithValidDetails_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor02, unique02@example.com, 9876543211, https://uniquevendor02.com, Hardware, 25 Park Street, PO102, Mysuru, Karnataka, 570001, India, Hardware vendor test record 02<br/>
+<a href="#Output-1736804080" onClick='toggleBox("Output-1736804080", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1736804080" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1736804080">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Create Vendor form opened successfully.<br/>
+Vendor details saved successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerPurchaseOrder.PurchaseOrder_Test.verifyPurchaseOrderCreation_Test()'><b>verifyPurchaseOrderCreation_Test</b><br>Test class: crmVtigerPurchaseOrder.PurchaseOrder_Test<br>Parameters: System Test PO, Ballari, Ballari, 1<br/>
+<a href="#Output-898810308" onClick='toggleBox("Output-898810308", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-898810308" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-898810308">
+Login Successful<br/>
+Purchase page is displayed<br/>
+Purchase Order subject entered: System Test PO<br/>
+Billing Address entered: Ballari<br/>
+Shipping Address entered: Ballari<br/>
+Product quantity entered: 1<br/>
+Purchase Order Save button clicked.<br/>
+Purchase Order is created<br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>crmVtigerPurchaseOrder.PurchaseOrder_Test@10683d9d</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.verifyVendorByNumber_Test()'><b>verifyVendorByNumber_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor01<br/>
+<a href="#Output-571532390" onClick='toggleBox("Output-571532390", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-571532390" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-571532390">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Search criteria selected: Vendor No<br/>
+Search Now button clicked.<br/>
+Vendor No verified: VEN2148<br/>
+Matching vendor count: 1<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.verifyPurchaseOrderQtyBVA_Test()'><b>verifyPurchaseOrderQtyBVA_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: BVA_PO_MIN, UniqueVendor03, Bangalore, Bangalore, 1, Accept<br/>
+<a href="#Output-364413600" onClick='toggleBox("Output-364413600", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-364413600" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-364413600">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Create Purchase Order clicked.<br/>
+Purchase Order subject entered: BVA_PO_MIN<br/>
+Selected Status: Approved<br/>
+Selected Assigned To: ACOE Fireflink<br/>
+Billing Address entered: Bangalore<br/>
+Shipping Address entered: Bangalore<br/>
+Product quantity entered: 1<br/>
+Purchase Order Save button clicked.<br/>
+Purchase Order form closed after save.<br/>
+Purchase Order form closed after saving valid Qty.<br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>58</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+</table><p>
+</body>
+</html>

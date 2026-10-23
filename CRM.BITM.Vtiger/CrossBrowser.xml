@@ -8,13 +8,13 @@
         <parameter name="browser" value="chrome"/>
         
         <classes>
-      		<class name="crmVtigerPriceBooks.PriceBooks_Test"/>
-      		<class name="crmVtigerAssest.Assest_Test"/>
-      		<class name="crmVtigerService.Service_Test"/>
-      		<class name="crmVtigerHome.Home_Test"/>
-      		<class name="crmVitgerVendors.Vendor_Test"/>
-      		<class name="crmVtigerPurchaseOrder.PurchaseOrder_Test"/>
       		<class name="crmVtigerLogin.Login_Test"/>
+      		<class name="crmVtigerHome.Home_Test"/>
+     		<class name="crmVtigerService.Service_Test"/>
+     		<class name="crmVtigerAssest.Assest_Test"/>
+     		<class name="crmVtigerPurchaseOrder.PurchaseOrder_Test"/>
+     		<class name="crmVtigerPriceBooks.PriceBooks_Test"/>
+     		<class name="crmVitgerVendors.Vendor_Test"/>
     		</classes>
     </test>
 

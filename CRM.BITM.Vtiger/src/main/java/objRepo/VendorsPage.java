@@ -234,14 +234,13 @@ public class VendorsPage {
     
     // Vendor update
     
-    public void updateWebsite(String newWebsite) {
+     public void updateWebsite(String newWebsite) {
         By websiteLocator = By.name("website");
-        WebElement website = wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(websiteLocator)));
+        WebElement website = wait.until(ExpectedConditions.visibilityOfElementLocated(websiteLocator));
         website.clear();
         website.sendKeys(newWebsite);
     }
-
-    public void verifyUpdatedWebsite(String expectedWebsite) {
+       public void verifyUpdatedWebsite(String expectedWebsite) {
         wait.until(ExpectedConditions.visibilityOf(websiteField));
         Assert.assertEquals( websiteField.getAttribute("value"),expectedWebsite,"Vendor website was not updated successfully.");
         Reporter.log("Vendor website updated successfully.", true);

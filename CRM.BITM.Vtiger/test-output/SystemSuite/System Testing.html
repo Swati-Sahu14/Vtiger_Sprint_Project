@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>TestNG:  System Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>System Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 23 17:38:38 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>255 seconds (255926 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>SYS </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.createPurchaseOrderFromVendor_Test()'><b>createPurchaseOrderFromVendor_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: System Test PO, UniqueVendor02, Ballari, Ballari, Phone, 1<br/>
+<a href="#Output-1506083063" onClick='toggleBox("Output-1506083063", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1506083063" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1506083063">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Create Purchase Order clicked.<br/>
+Purchase Order subject entered: System Test PO<br/>
+Selected Status: Approved<br/>
+Selected Assigned To: ACOE Fireflink<br/>
+Billing Address entered: Ballari<br/>
+Shipping Address entered: Ballari<br/>
+Product quantity entered: 1<br/>
+Purchase Order Save button clicked.<br/>
+More Information tab clicked successfully.<br/>
+More Information page displays Products, Purchase Order, Contacts, and Email sections.<br/>
+Purchase Order section expanded.<br/>
+Order No Subject  Vendor Name Tracking Number Total Assigned To Action<br/>
+PO737 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO523 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO651 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO542 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO715 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO544 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO498 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO653 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO782 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO426 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO546 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO630 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO436 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO869 System Test PO UniqueVendor02 $0.040 ACOE Fireflink edit | del<br/>
+PO655 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO398 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO438 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO548 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO631 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+PO501 System Test PO UniqueVendor02 $0.000 ACOE Fireflink edit | del<br/>
+Purchase Order section displayed successfully.<br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerService.Service_Test.STC02()'><b>STC02</b><br>Test class: crmVtigerService.Service_Test<br/>
+<a href="#Output-2115640742" onClick='toggleBox("Output-2115640742", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2115640742" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2115640742">
+Login Successful<br/>
+Services page is displayed<br/>
+Active Status:no <br/>
+After<br/>
+Active Status:yes <br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>49</td>
+<td>crmVtigerService.Service_Test@2f4948e4</td></tr>
+<tr>
+<td title='crmVitgerVendors.Vendor_Test.EndToEndVendor_Test()'><b>EndToEndVendor_Test</b><br>Test class: crmVitgerVendors.Vendor_Test<br>Parameters: UniqueVendor14<br/>
+<a href="#Output-1481970600" onClick='toggleBox("Output-1481970600", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1481970600" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1481970600">
+Login Successful<br/>
+Vendors page is displayed<br/>
+Create Vendor form opened successfully.<br/>
+Vendor details saved successfully.<br/>
+Search criteria selected: Vendor Name<br/>
+Search Now button clicked.<br/>
+Vendor is present in the Vendors list: UniqueVendor14<br/>
+Signout is successful<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>crmVitgerVendors.Vendor_Test@5aa9e4eb</td></tr>
+<tr>
+<td title='crmVtigerAssest.Assest_Test.verifyAssetInformationPersistsAfterRelogin_Test()'><b>verifyAssetInformationPersistsAfterRelogin_Test</b><br>Test class: crmVtigerAssest.Assest_Test<br>Parameters: 456, New_Assest01<br/>
+<a href="#Output-1679002380" onClick='toggleBox("Output-1679002380", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1679002380" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1679002380">
+Login Successful<br/>
+Assets page is displayed<br/>
+Signout is successful<br/>
+Login Successful<br/>
+Assets page is displayed<br/>
+Asset is present in the Assets table: New_Assest01<br/>
+</div>
+</td>
+<td></td>
+<td>98</td>
+<td>crmVtigerAssest.Assest_Test@1f2586d6</td></tr>
+</table><p>
+</body>
+</html>

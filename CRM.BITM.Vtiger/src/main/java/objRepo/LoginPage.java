@@ -56,15 +56,16 @@ public class LoginPage {
 	    wait.until(ExpectedConditions.visibilityOf(un));
 	    wait.until(ExpectedConditions.visibilityOf(pw));
 
-	    wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
+	    loginBtn.click();
 
-	    wait.until(ExpectedConditions.urlContains("module=Home"));
+	    wait.until(ExpectedConditions.visibilityOf(verify));
 
-	    Assert.assertTrue(d.getCurrentUrl().contains("module=Home"),
-	            "Login is not successful");
+	    Assert.assertTrue(verify.isDisplayed(), "Login is not successful");
 
 	    Reporter.log("Login Successful", true);
 	}
+
+
 	
 	public void getlogin() {
 		loginBtn.click();
