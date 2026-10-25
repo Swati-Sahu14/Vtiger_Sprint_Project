@@ -17,103 +17,55 @@
       <![CDATA[Login Successful]]>
     </line>
     <line>
-      <![CDATA[Assets page is displayed]]>
-    </line>
-    <line>
-      <![CDATA[Asset Name changed to: Updated_New_Assest01]]>
-    </line>
-    <line>
-      <![CDATA[PASS: Updated Asset Name was not saved: Updated_New_Assest01]]>
-    </line>
-    <line>
-      <![CDATA[Signout is successful]]>
-    </line>
-    <line>
-      <![CDATA[Browser closed successfully.]]>
-    </line>
-    <line>
-      <![CDATA[Opening browser]]>
-    </line>
-    <line>
-      <![CDATA[Application launched]]>
-    </line>
-    <line>
-      <![CDATA[Login Successful]]>
-    </line>
-    <line>
-      <![CDATA[Purchase page is displayed]]>
-    </line>
-    <line>
-      <![CDATA[Purchase Order subject updated: Updated_System_test]]>
-    </line>
-    <line>
-      <![CDATA[Purchase Order Save button clicked.]]>
-    </line>
-    <line>
-      <![CDATA[updated name is displayed]]>
-    </line>
-    <line>
-      <![CDATA[Edited Order name: Updated_System_test]]>
-    </line>
-    <line>
-      <![CDATA[Edited Orders: PO231 Updated_System_test RashiPeripherals_1544 $0.00 ACOE Fireflink edit | del]]>
-    </line>
-    <line>
-      <![CDATA[Browser closed successfully.]]>
-    </line>
-    <line>
-      <![CDATA[Opening browser]]>
-    </line>
-    <line>
-      <![CDATA[Application launched]]>
-    </line>
-    <line>
-      <![CDATA[Login Successful]]>
-    </line>
-    <line>
       <![CDATA[Vendors page is displayed]]>
     </line>
     <line>
-      <![CDATA[Search criteria selected: Vendor Name]]>
-    </line>
-    <line>
-      <![CDATA[Search Now button clicked.]]>
-    </line>
-    <line>
-      <![CDATA[Original phone of UniqueVendor02: 9876543200]]>
-    </line>
-    <line>
-      <![CDATA[Vendors page is displayed]]>
-    </line>
-    <line>
-      <![CDATA[Search criteria selected: Vendor Name]]>
-    </line>
-    <line>
-      <![CDATA[Search Now button clicked.]]>
-    </line>
-    <line>
-      <![CDATA[Clicked on Edit button]]>
+      <![CDATA[Create Vendor form opened successfully.]]>
     </line>
     <line>
       <![CDATA[Vendor details saved successfully.]]>
     </line>
     <line>
+      <![CDATA[Browser closed successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login Successful]]>
+    </line>
+    <line>
       <![CDATA[Vendors page is displayed]]>
     </line>
     <line>
-      <![CDATA[Search criteria selected: Vendor Name]]>
+      <![CDATA[Create Vendor form opened successfully.]]>
     </line>
     <line>
-      <![CDATA[Search Now button clicked.]]>
+      <![CDATA[Vendor details saved successfully.]]>
     </line>
     <line>
-      <![CDATA[Vendor phone number remains unchanged: 9876543200]]>
+      <![CDATA[Browser closed successfully.]]>
     </line>
     <line>
-      <![CDATA[Updating UniqueVendor03 did not change the phone number of UniqueVendor02.]]>
+      <![CDATA[Opening browser]]>
     </line>
     <line>
-      <![CDATA[Signout is successful]]>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login Successful]]>
+    </line>
+    <line>
+      <![CDATA[Vendors page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Create Vendor form opened successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Vendor details saved successfully.]]>
     </line>
     <line>
       <![CDATA[Browser closed successfully.]]>
@@ -125,22 +77,32 @@
       <![CDATA[Close Database connectivity]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-23T17:46:11 IST" name="RegressionSuite" finished-at="2026-10-23T17:49:14 IST" duration-ms="182259">
+  <suite started-at="2026-10-25T23:46:33 IST" name="Default suite" finished-at="2026-10-25T23:49:07 IST" duration-ms="153575">
     <groups>
       <group name="POS">
-        <method signature="PurchaseOrder_Test.verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test(java.lang.String)[pri:2, instance:crmVtigerPurchaseOrder.PurchaseOrder_Test@10683d9d]" name="verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test" class="crmVtigerPurchaseOrder.PurchaseOrder_Test"/>
-        <method signature="Assest_Test.verifyCancelDoesNotSaveAssetChanges_Test(java.lang.String,java.lang.String)[pri:5, instance:crmVtigerAssest.Assest_Test@1f2586d6]" name="verifyCancelDoesNotSaveAssetChanges_Test" class="crmVtigerAssest.Assest_Test"/>
-        <method signature="Vendor_Test.verifyVendorPhoneRegression_Test(java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:crmVitgerVendors.Vendor_Test@5aa9e4eb]" name="verifyVendorPhoneRegression_Test" class="crmVitgerVendors.Vendor_Test"/>
+        <method signature="Vendor_Test.createVendorWithValidDetails_Test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:crmVitgerVendors.Vendor_Test@36ebc363]" name="createVendorWithValidDetails_Test" class="crmVitgerVendors.Vendor_Test"/>
       </group> <!-- POS -->
-      <group name="REG">
-        <method signature="PurchaseOrder_Test.verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test(java.lang.String)[pri:2, instance:crmVtigerPurchaseOrder.PurchaseOrder_Test@10683d9d]" name="verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test" class="crmVtigerPurchaseOrder.PurchaseOrder_Test"/>
-        <method signature="Assest_Test.verifyCancelDoesNotSaveAssetChanges_Test(java.lang.String,java.lang.String)[pri:5, instance:crmVtigerAssest.Assest_Test@1f2586d6]" name="verifyCancelDoesNotSaveAssetChanges_Test" class="crmVtigerAssest.Assest_Test"/>
-        <method signature="Vendor_Test.verifyVendorPhoneRegression_Test(java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:crmVitgerVendors.Vendor_Test@5aa9e4eb]" name="verifyVendorPhoneRegression_Test" class="crmVitgerVendors.Vendor_Test"/>
-      </group> <!-- REG -->
+      <group name="FUN">
+        <method signature="Vendor_Test.createVendorWithValidDetails_Test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:crmVitgerVendors.Vendor_Test@36ebc363]" name="createVendorWithValidDetails_Test" class="crmVitgerVendors.Vendor_Test"/>
+      </group> <!-- FUN -->
     </groups>
-    <test started-at="2026-10-23T17:46:11 IST" name="Regression Testing" finished-at="2026-10-23T17:49:14 IST" duration-ms="182259">
-      <class name="crmVtigerPurchaseOrder.PurchaseOrder_Test">
-        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVtigerPurchaseOrder.PurchaseOrder_Test@10683d9d]" started-at="2026-10-23T17:47:17 IST" name="bc" finished-at="2026-10-23T17:47:18 IST" duration-ms="1093" status="PASS">
+    <test started-at="2026-10-25T23:46:33 IST" name="Default test" finished-at="2026-10-25T23:49:07 IST" duration-ms="153575">
+      <class name="crmVitgerVendors.Vendor_Test">
+        <test-method is-config="true" signature="bs()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:46:33 IST" name="bs" finished-at="2026-10-25T23:46:33 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Open Database]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bs -->
+        <test-method is-config="true" signature="bt()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:46:33 IST" name="bt" finished-at="2026-10-25T23:46:33 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PreCondition]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:46:34 IST" name="bc" finished-at="2026-10-25T23:46:37 IST" duration-ms="3614" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -157,11 +119,66 @@
             </line>
           </reporter-output>
         </test-method> <!-- bc -->
-        <test-method signature="verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test(java.lang.String)[pri:2, instance:crmVtigerPurchaseOrder.PurchaseOrder_Test@10683d9d]" started-at="2026-10-23T17:47:18 IST" name="verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test" data-provider="newPurchase" finished-at="2026-10-23T17:48:16 IST" duration-ms="58099" status="PASS">
+        <test-method signature="createVendorWithValidDetails_Test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:46:37 IST" name="createVendorWithValidDetails_Test" data-provider="vendorData" finished-at="2026-10-25T23:47:26 IST" duration-ms="48860" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Updated_System_test]]>
+                <![CDATA[UniqueVendor01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[unique01@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://uniquevendor01.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Software]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12 MG Road]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[PO101]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Bengaluru]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Karnataka]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[560001]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Software vendor test record 01]]>
               </value>
             </param>
           </params>
@@ -170,35 +187,24 @@
               <![CDATA[Login Successful]]>
             </line>
             <line>
-              <![CDATA[Purchase page is displayed]]>
+              <![CDATA[Vendors page is displayed]]>
             </line>
             <line>
-              <![CDATA[Purchase Order subject updated: Updated_System_test]]>
+              <![CDATA[Create Vendor form opened successfully.]]>
             </line>
             <line>
-              <![CDATA[Purchase Order Save button clicked.]]>
-            </line>
-            <line>
-              <![CDATA[updated name is displayed]]>
-            </line>
-            <line>
-              <![CDATA[Edited Order name: Updated_System_test]]>
-            </line>
-            <line>
-              <![CDATA[Edited Orders: PO231 Updated_System_test RashiPeripherals_1544 $0.00 ACOE Fireflink edit | del]]>
+              <![CDATA[Vendor details saved successfully.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyEditingOnePurchaseOrderDoesNotAffectAnother_Test -->
-        <test-method is-config="true" signature="ac()[pri:0, instance:crmVtigerPurchaseOrder.PurchaseOrder_Test@10683d9d]" started-at="2026-10-23T17:48:16 IST" name="ac" finished-at="2026-10-23T17:48:16 IST" duration-ms="164" status="PASS">
+        </test-method> <!-- createVendorWithValidDetails_Test -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:47:26 IST" name="ac" finished-at="2026-10-25T23:47:26 IST" duration-ms="251" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser closed successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- ac -->
-      </class> <!-- crmVtigerPurchaseOrder.PurchaseOrder_Test -->
-      <class name="crmVitgerVendors.Vendor_Test">
-        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVitgerVendors.Vendor_Test@5aa9e4eb]" started-at="2026-10-23T17:48:17 IST" name="bc" finished-at="2026-10-23T17:48:18 IST" duration-ms="1021" status="PASS">
+        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:47:26 IST" name="bc" finished-at="2026-10-25T23:47:28 IST" duration-ms="1149" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,7 +221,109 @@
             </line>
           </reporter-output>
         </test-method> <!-- bc -->
-        <test-method signature="verifyVendorPhoneRegression_Test(java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:crmVitgerVendors.Vendor_Test@5aa9e4eb]" started-at="2026-10-23T17:48:18 IST" name="verifyVendorPhoneRegression_Test" data-provider="vendorPhoneRegressionData" finished-at="2026-10-23T17:49:14 IST" duration-ms="55814" status="PASS">
+        <test-method signature="createVendorWithValidDetails_Test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:47:28 IST" name="createVendorWithValidDetails_Test" data-provider="vendorData" finished-at="2026-10-25T23:48:16 IST" duration-ms="48675" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[UniqueVendor02]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[unique02@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9876543211]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://uniquevendor02.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Hardware]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[25 Park Street]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[PO102]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Mysuru]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Karnataka]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[570001]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Hardware vendor test record 02]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login Successful]]>
+            </line>
+            <line>
+              <![CDATA[Vendors page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Create Vendor form opened successfully.]]>
+            </line>
+            <line>
+              <![CDATA[Vendor details saved successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createVendorWithValidDetails_Test -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:48:16 IST" name="ac" finished-at="2026-10-25T23:48:16 IST" duration-ms="148" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser closed successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ac -->
+        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:48:16 IST" name="bc" finished-at="2026-10-25T23:48:18 IST" duration-ms="1073" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bc -->
+        <test-method signature="createVendorWithValidDetails_Test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:48:18 IST" name="createVendorWithValidDetails_Test" data-provider="vendorData" finished-at="2026-10-25T23:49:06 IST" duration-ms="48937" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -224,12 +332,57 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[9876543277]]>
+                <![CDATA[unique03@example.com]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[UniqueVendor02]]>
+                <![CDATA[9876543212]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://uniquevendor03.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Electronics]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[8 Main Road]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[PO103]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Hubballi]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Karnataka]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[580020]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Electronics vendor test record 03]]>
               </value>
             </param>
           </params>
@@ -241,144 +394,35 @@
               <![CDATA[Vendors page is displayed]]>
             </line>
             <line>
-              <![CDATA[Search criteria selected: Vendor Name]]>
-            </line>
-            <line>
-              <![CDATA[Search Now button clicked.]]>
-            </line>
-            <line>
-              <![CDATA[Original phone of UniqueVendor02: 9876543200]]>
-            </line>
-            <line>
-              <![CDATA[Vendors page is displayed]]>
-            </line>
-            <line>
-              <![CDATA[Search criteria selected: Vendor Name]]>
-            </line>
-            <line>
-              <![CDATA[Search Now button clicked.]]>
-            </line>
-            <line>
-              <![CDATA[Clicked on Edit button]]>
+              <![CDATA[Create Vendor form opened successfully.]]>
             </line>
             <line>
               <![CDATA[Vendor details saved successfully.]]>
             </line>
-            <line>
-              <![CDATA[Vendors page is displayed]]>
-            </line>
-            <line>
-              <![CDATA[Search criteria selected: Vendor Name]]>
-            </line>
-            <line>
-              <![CDATA[Search Now button clicked.]]>
-            </line>
-            <line>
-              <![CDATA[Vendor phone number remains unchanged: 9876543200]]>
-            </line>
-            <line>
-              <![CDATA[Updating UniqueVendor03 did not change the phone number of UniqueVendor02.]]>
-            </line>
-            <line>
-              <![CDATA[Signout is successful]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- verifyVendorPhoneRegression_Test -->
-        <test-method is-config="true" signature="ac()[pri:0, instance:crmVitgerVendors.Vendor_Test@5aa9e4eb]" started-at="2026-10-23T17:49:14 IST" name="ac" finished-at="2026-10-23T17:49:14 IST" duration-ms="162" status="PASS">
+        </test-method> <!-- createVendorWithValidDetails_Test -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:49:06 IST" name="ac" finished-at="2026-10-25T23:49:07 IST" duration-ms="165" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser closed successfully.]]>
             </line>
           </reporter-output>
         </test-method> <!-- ac -->
-      </class> <!-- crmVitgerVendors.Vendor_Test -->
-      <class name="crmVtigerAssest.Assest_Test">
-        <test-method is-config="true" signature="bc(java.lang.String)[pri:0, instance:crmVtigerAssest.Assest_Test@1f2586d6]" started-at="2026-10-23T17:46:12 IST" name="bc" finished-at="2026-10-23T17:46:13 IST" duration-ms="1637" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Opening browser]]>
-            </line>
-            <line>
-              <![CDATA[Application launched]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- bc -->
-        <test-method signature="verifyCancelDoesNotSaveAssetChanges_Test(java.lang.String,java.lang.String)[pri:5, instance:crmVtigerAssest.Assest_Test@1f2586d6]" started-at="2026-10-23T17:46:13 IST" name="verifyCancelDoesNotSaveAssetChanges_Test" data-provider="updatedAssetName" finished-at="2026-10-23T17:47:17 IST" duration-ms="63404" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[New_Assest01]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Updated_New_Assest01]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Login Successful]]>
-            </line>
-            <line>
-              <![CDATA[Assets page is displayed]]>
-            </line>
-            <line>
-              <![CDATA[Asset Name changed to: Updated_New_Assest01]]>
-            </line>
-            <line>
-              <![CDATA[PASS: Updated Asset Name was not saved: Updated_New_Assest01]]>
-            </line>
-            <line>
-              <![CDATA[Signout is successful]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyCancelDoesNotSaveAssetChanges_Test -->
-        <test-method is-config="true" signature="ac()[pri:0, instance:crmVtigerAssest.Assest_Test@1f2586d6]" started-at="2026-10-23T17:47:17 IST" name="ac" finished-at="2026-10-23T17:47:17 IST" duration-ms="209" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser closed successfully.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- ac -->
-      </class> <!-- crmVtigerAssest.Assest_Test -->
-      <class name="crmVtigerLogin.Login_Test">
-        <test-method is-config="true" signature="bs()[pri:0, instance:crmVtigerLogin.Login_Test@5542c4ed]" started-at="2026-10-23T17:46:11 IST" name="bs" finished-at="2026-10-23T17:46:11 IST" duration-ms="11" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Open Database]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- bs -->
-        <test-method is-config="true" signature="bt()[pri:0, instance:crmVtigerLogin.Login_Test@5542c4ed]" started-at="2026-10-23T17:46:11 IST" name="bt" finished-at="2026-10-23T17:46:11 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[PreCondition]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- bt -->
-        <test-method is-config="true" signature="at()[pri:0, instance:crmVtigerLogin.Login_Test@5542c4ed]" started-at="2026-10-23T17:49:14 IST" name="at" finished-at="2026-10-23T17:49:14 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="at()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:49:07 IST" name="at" finished-at="2026-10-25T23:49:07 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[PostCondition]]>
             </line>
           </reporter-output>
         </test-method> <!-- at -->
-        <test-method is-config="true" signature="as()[pri:0, instance:crmVtigerLogin.Login_Test@5542c4ed]" started-at="2026-10-23T17:49:14 IST" name="as" finished-at="2026-10-23T17:49:14 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="as()[pri:0, instance:crmVitgerVendors.Vendor_Test@36ebc363]" started-at="2026-10-25T23:49:07 IST" name="as" finished-at="2026-10-25T23:49:07 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Close Database connectivity]]>
             </line>
           </reporter-output>
         </test-method> <!-- as -->
-      </class> <!-- crmVtigerLogin.Login_Test -->
-    </test> <!-- Regression Testing -->
-  </suite> <!-- RegressionSuite -->
+      </class> <!-- crmVitgerVendors.Vendor_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

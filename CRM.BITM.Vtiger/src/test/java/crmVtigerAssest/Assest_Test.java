@@ -43,7 +43,7 @@ public class Assest_Test extends BaseClass {
 	    a.getsearchnowbtn();
 	}
 	
-	// Verifies that an existing invoice can be associated with an asset
+	// Verifies that invoice can be associated with an asset
 	@Test(priority = 3, groups = {"INT", "POS"},dataProvider ="newAsset",dataProviderClass = DataProviderClass.class)
 	public void verifyExistingInvoiceCanBeAssociatedWithAsset_Test(String no,String name)
 	        throws Exception {
